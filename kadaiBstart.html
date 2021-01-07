@@ -24,17 +24,17 @@
       transform: rotate(360deg);
     }
     .chuukichi {
-      background: pink;
-      border-radius: 50%;
-      transform: rotate(360deg);
-    }
-    .shoukichi {
       background: orange;
       border-radius: 50%;
       transform: rotate(360deg);
     }
+    .shoukichi {
+      background: pink;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
     .kyou {
-      background: yellow;
+      background: gray;
       border-radius: 50%;
       transform: rotate(360deg);
     }
@@ -50,9 +50,9 @@
 
     const num = 10;
     const daikichi = Math.floor(Math.random() * num); // 0 - 4
-    const chuukichi = Math.floor(Math.random() * num); 
-    const shoukichi = Math.floor(Math.random() * num); 
-    const kyou = Math.floor(Math.random() * num); 
+    const chuukichi = Math.floor(Math.random() * num - daikichi); 
+    const shoukichi = Math.floor(Math.random() * num - chuukichi); 
+    const kyou = Math.floor(Math.random() * num - shokichi); 
 
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
